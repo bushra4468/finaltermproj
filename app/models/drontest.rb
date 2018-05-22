@@ -1,0 +1,2 @@
+class Drontest < ApplicationRecord
+end

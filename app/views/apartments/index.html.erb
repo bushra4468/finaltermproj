@@ -1,0 +1,113 @@
+
+<div class="hero-section">
+  <div class="hero-section-text">
+    <h5>THE</h5>
+    <h1>GREENPOINT</h1>
+    <h5>21 INDIA ST.</h5>
+
+  </div>
+</div>
+
+
+
+
+<h1>Luxury Waterfront</h1>
+<ul class="menu menu-hover-lines">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">About Us</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Products</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+
+<div class="about-the-author">
+  <h3 class="author-title">About GreenPoint</h3>
+  <div class="row">
+    <div class="small-12 medium-4 columns">
+      <div class="author-image">
+        <img src="https://thegreenpoint.nyc/media/2017/03/UrbanDevelopment_145West_Hero_Dusk_web-500x700.jpg">
+      </div>
+      <div class="author-social">
+        <a href="#">
+          <span class="fa-stack fa-lg facebook">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#">
+          <span class="fa-stack fa-lg twitter">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#">
+          <span class="fa-stack fa-lg linkedin">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="small-12 medium-8 columns">
+      <h4 class="separator-left">The Greenpoint</h4>
+      <p>is a collection of 95 contemporary condominium residences for sale on the Brooklyn waterfront—a gateway to Manhattan and a destination in itself. Rising 40 stories in glass, steel and brick, The Greenpoint brings a new luxury condominium lifestyle to this Brooklyn neighborhood. Thoughtfully designed one to three bedroom condos offer spectacular views, airy living spaces and excellent light. An amenity-rich lifestyle awaits with 30,000 square feet of space to live, work and play while the NYC Ferry is just outside your door offering convenient and direct access to Midtown Manhattan, Wall Street, Williamsburg, Long Island City and more. Strolling along the waterside boardwalks at twilight, you’ll feel all that makes Greenpoint a magical home.</p>
+    </div>
+  </div>
+</div>
+
+<div class="hero-section">
+  <div class="hero-section-text">
+    <p> Waterfront Porte Cochère and Onsite Parking Garage </p>
+  </div>
+</div>
+
+
+<div class="marketing-site-content-section">
+  <div class="marketing-site-content-section-img">
+    <img src="https://thegreenpoint.nyc/media/2017/03/UrbanDevelopment_145West_MainLobby_03032017.jpg" alt="" />
+  </div>
+  <div class="marketing-site-content-section-block">
+
+  </div>
+  <div class="marketing-site-content-section-block small-order-2 medium-order-1">
+    <h3 class="marketing-site-content-section-block-header">The GreenPoint Agency</h3>
+    <p class="marketing-site-content-section-block-subheader subheader">The Greenpoint is a refuge— one of Brooklyn’s first condominiums to offer residents the refinements that they desire, within entirely new, state-of-the-art construction. Through the solid walnut door of your home, you’ll find an airy living space with high ceilings and wide-plank hardwood floors, open to a custom-built kitchen of Statuario marble, top-of-the-line appliances and understated brushed-metal hardware. In the bathrooms, a mix of mosaic floors, polished chrome fixtures and ship-like lanterns lend a maritime flair, connecting the space with the East River just outside.</p>
+    <a href="#" class="round button small">learn more</a>
+  </div>
+  <div class="marketing-site-content-section-img small-order-1 medium-order-2">
+    <img src="https://thegreenpoint.nyc/media/2017/03/UrbanDevelopment_145West_MasterBath_web.jpg" alt="" />
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Apartments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apartments.each do |apartment| %>
+      <tr>
+        <td><%= apartment.name %></td>
+        <td><%= apartment.phone %></td>
+        <td><%= apartment.email %></td>
+        <td><%= link_to 'Show', apartment %></td>
+        <td><%= link_to 'Edit', edit_apartment_path(apartment) %></td>
+        <td><%= link_to 'Destroy', apartment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apartment', new_apartment_path %>
